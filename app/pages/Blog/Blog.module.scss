@@ -1,0 +1,304 @@
+.blogContainer {
+  width: 95%;
+  margin: 0 auto;
+  //first section
+  // margin-top: 120px;
+  .articlesContainer {
+    // width: 100%;
+    h2 {
+      font-size: 25px;
+      color: #5751e1;
+      padding: 15px 18px;
+    }
+
+    h4 {
+      font-size: 22px;
+      padding: 15px 18px;
+    }
+
+    .articleRow {
+      display: grid;
+      // grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+.articleClick{
+  cursor: pointer;
+}
+    .articleCol {
+      margin: 1%;
+
+      .articleCard {
+        box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+
+        .articleImg {
+          width: 100%;
+          height: auto;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .articleDetails {
+          padding: 10px 0px;
+
+          h3 {
+            font-size: 18px;
+            padding: 15px;
+          }
+
+          h5 {
+            font-size: 17px;
+            padding: 15px;
+            color: #858585;
+          }
+
+          p {
+            font-size: 15px;
+            color: #000000;
+            padding: 5px 15px;
+          }
+        }
+
+        .articleIcons {
+          display: flex;
+
+          p {
+            font-size: 15px;
+          }
+
+          h6 {
+            font-size: 15px;
+            padding: 5px;
+            svg {
+              color: black;
+            }
+          }
+
+          h5 {
+            padding: 5px 20px;
+            color: black;
+            font-size: 15px;
+            svg {
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
+    @media (min-width: 300px) and (max-width: 599px) {
+      .articleRow {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (min-width: 600px) and (max-width: 1023px) {
+      .articleRow {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .articleRow {
+        // width: calc(33.33% - 20px);
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .articleCard {
+        .articleIcons {
+          h6 {
+            margin-left: 30%;
+          }
+        }
+      }
+    }
+  }
+
+  //second section
+
+}
+
+// Media queries
+@media (min-width: 300px) and (max-width: 599px) {
+  .blogContainer {
+    padding: 10px;
+
+    .principleContainer {
+      .blogImg {
+        height: 40vh;
+      }
+
+      .principleDetails {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .principleContent {
+        span {
+          font-size: 18px;
+        }
+
+        p {
+          font-size: 16px;
+          padding: 10px 0;
+        }
+      }
+    }
+
+    .reviewContainer {
+      h3 {
+        font-size: 20px;
+      }
+
+      .reviewContent {
+        flex-direction: column;
+        align-items: flex-start;
+
+        .reviewProfile {
+          img {
+            padding: 10px;
+          }
+        }
+
+        .reviewDetails {
+          padding: 0px 10px;
+
+          .userName {
+            h4 {
+              font-size: 18px;
+            }
+
+            p {
+              font-size: 16px;
+            }
+          }
+        }
+      }
+
+      .reviewData {
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) {
+  .blogContainer {
+    padding: 15px;
+
+    .principleContainer {
+      .blogImg {
+        height: 50vh;
+      }
+
+      .principleDetails {
+        .principleDate {
+          p {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .principleContent {
+        span {
+          font-size: 20px;
+        }
+
+        p {
+          font-size: 18px;
+          padding: 12px 0;
+        }
+      }
+    }
+
+    .reviewContainer {
+      h3 {
+        font-size: 22px;
+      }
+
+      .reviewContent {
+        flex-direction: row;
+        align-items: center;
+
+        .reviewProfile {
+          img {
+            padding: 10px;
+          }
+        }
+
+        .reviewDetails {
+          padding: 15px;
+
+          .userName {
+            h4 {
+              font-size: 20px;
+            }
+
+            p {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .reviewData {
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .blogContainer {
+    // padding: 20px;
+
+    .principleContainer {
+      .blogImg {
+        height: 65vh;
+      }
+
+      .principleDetails {
+      }
+
+      .principleContent {
+        span {
+          font-size: 21px;
+        }
+
+        p {
+          font-size: 19px;
+        }
+      }
+    }
+
+    .reviewContainer {
+      h3 {
+        font-size: 24px;
+      }
+
+      .reviewContent {
+        flex-direction: row;
+        align-items: center;
+
+        .reviewProfile {
+          img {
+            padding: 10px;
+          }
+        }
+      }
+
+      .reviewData {
+        p {
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}

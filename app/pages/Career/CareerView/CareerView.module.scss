@@ -1,0 +1,344 @@
+//third section
+
+.careerDescriptionContainer {
+    .careerImage {
+        width: 100%;
+        height: 65vh;
+        background-image: url('../../../../public/image/careerImg2.png');  
+        background-size: cover;  
+        background-position: center; 
+        margin-top: 8%;
+        padding: 10px;
+    }
+  
+    .descriptionData {
+        display: flex;
+        padding:10px 0px;
+  
+        .descriptionHead {
+            padding: 20px;
+  
+            h3 {
+                font-size: 32px;
+            }
+        }
+  
+        .descriptionBtn {
+            padding: 20px;
+            margin-left: auto; 
+  
+            button {
+                all: unset;
+                color: white;
+                background: #5751E1;
+                border-radius: 10px;
+                padding: 15px 60px;
+                font-size: 20px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+  
+                &:hover {
+                    background: #4647b1;
+                }
+            }
+        }
+    }
+  
+    .descriptionContent {
+        padding: 10px;
+  
+        span {
+            font-weight: bold;
+            font-size: 21px;
+        }
+  
+        p {
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+  
+    .descriptionDetails {
+        padding: 10px;
+  
+        h3 {
+            font-size: 22px;
+            padding: 10px;
+        }
+  
+        span {
+            font-weight: bold;
+            font-size: 21px;
+        }
+  
+        p {
+            font-size: 20px;
+            padding: 10px;
+        }
+    }
+  }
+  
+  // Mobile Styles
+  @media (min-width: 300px) and (max-width: 599px) {
+    .careerDescriptionContainer {
+        .descriptionData {
+            flex-direction: column;
+  
+            .descriptionHead {
+                h3 {
+                    font-size: 26px;
+                }
+            }
+  
+            .descriptionBtn {
+                margin-left: 0;
+  
+                button {
+                    padding: 12px 30px; 
+                    font-size: 16px; 
+                }
+            }
+        }
+  
+        .descriptionContent, .descriptionDetails {
+            padding: 10px;
+  
+            span {
+                font-size: 18px;
+            }
+  
+            p {
+                font-size: 16px; 
+            }
+        }
+    }
+  }
+  
+  // Tablet Styles
+  @media (min-width: 600px) and (max-width: 1023px) {
+    .careerDescriptionContainer {
+        .descriptionData {
+            .descriptionHead {
+                h3 {
+                    font-size: 30px; 
+                }
+            }
+  
+            .descriptionBtn {
+                button {
+                    padding: 15px 50px; 
+                    font-size: 18px; 
+                }
+            }
+        }
+  
+        .descriptionContent, .descriptionDetails {
+            span {
+                font-size: 20px; 
+            }
+  
+            p {
+                font-size: 18px; 
+            }
+        }
+    }
+  }
+  
+  // Laptop Styles
+  @media (max-width: 1024px) {
+    .careerDescriptionContainer {
+        .descriptionData {
+            .descriptionHead {
+                h3 {
+                    font-size: 32px; 
+                }
+            }
+  
+            .descriptionBtn {
+                button {
+                    padding: 15px 60px;
+                    font-size: 20px;
+                }
+            }
+        }
+  
+        .descriptionContent, .descriptionDetails {
+            span {
+                font-size: 21px;
+            }
+  
+            p {
+                font-size: 20px;
+            }
+        }
+    }
+  }
+  
+.formContainer {
+    background: #5751E1;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+  
+    h3 {
+        font-size: 32px;
+        padding: 20px;
+        color: white;
+    }
+  
+    .inputContainer {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+  
+    .inputs {
+        flex: 1;
+        padding: 0; 
+        margin: 20px 25px 20px 25px;
+  
+        &:last-child {
+            margin-left: 30px;
+        }
+  
+        label {
+            color: white;
+            font-size: 20px;
+            padding: 15px 0px;
+            display: block;
+        }
+  
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        select {
+            width: 100%;
+            padding: 16px; 
+            font-size: 18px; 
+            border: 2px solid transparent; 
+            border-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: border-color 0.3s;
+  
+            &:focus {
+                outline: none; 
+                border-color: white; 
+                box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); 
+            }
+        }
+  
+        .errorMessage {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    }
+  
+    .fileUpload {
+        padding: 20px;
+  
+        h3 {
+            font-size: 20px;
+            color: white;
+        }
+  
+        .fileUploadContainer {
+            border: 2px dashed rgb(248, 248, 248);
+            text-align: center;
+            border-radius: 4px;
+            position: relative;
+            padding: 10px;
+  
+            .fileUploadContent {
+                padding: 20px; 
+            }
+  
+            svg {
+                font-size: 60px; 
+                padding: 10px;
+                color: white;
+            }
+  
+            p {
+                color: white;
+                font-size: 15px;
+            }
+  
+            .fileSizeInfo {
+                font-size: 13px;
+                margin-top: 5px;
+            }
+  
+            input[type="file"] {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                opacity: 0; 
+                cursor: pointer; 
+            }
+        }
+    }
+  
+    .submitBtn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+  
+        button {
+            all: unset;
+            background-color: white;
+            color: #5751E1;
+            padding: 15px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            font-weight: bold;
+  
+            &:hover {
+                background-color: #fdf6f6;
+                color: #19357a;
+            }
+        }
+    }
+  
+    // Mobile Styles
+    @media (min-width: 300px) and (max-width: 599px) {
+        .inputContainer {
+            flex-direction: column; 
+            width: 100%;
+        }
+  
+        .inputs {
+            margin-right: 0; 
+            margin-bottom: 15px; 
+            //width: 170%;
+  
+        }
+  
+        .inputs:last-child {
+            margin-bottom: 0; 
+        }
+    }
+  
+    // Tablet Styles
+    @media (min-width: 600px) and (max-width: 1023px) {
+        .inputContainer {
+            width: 100%; 
+        }
+        /*.inputs{
+          width: 100%;
+        }*/
+    }
+  
+    // Laptop Styles
+    @media (max-width: 1024px) {
+        .inputContainer {
+            width: 100%; 
+  
+        }
+    }
+  }

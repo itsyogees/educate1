@@ -1,0 +1,244 @@
+.contactContainer {
+    padding: 20px;
+// margin-top: 100px;
+    h2 {
+        font-size: 40px;
+        text-align: center;
+        padding: 15px;
+
+        span {
+            color: #5751E1;
+        }
+    }
+
+    .contactImg {
+        width: 100%;
+        height: 65vh;
+        background-image: url('../../../public/image/contactImg1.png');
+        background-size: cover;
+        background-position: center;
+
+        img {
+            width: 100%;
+            //max-width: 400px;
+        }
+    }
+
+    .contactCards {
+        padding: 25px 10px;
+
+        .contactRow {
+            display: grid;
+            //grid-template-columns: repeat(2, 1fr); 
+            gap: 20px; 
+            margin: 0; 
+            //padding: 20px 10px;
+
+            .contactCol {
+               // margin: 1%;
+
+                .contactCard {
+                    box-shadow: 1px 1px 4px 3px rgba(0, 0, 0, 0.2);
+                    border-radius: 8px;
+                    overflow: hidden;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between; 
+                    //padding: 15px;
+                    //height: 65vh;
+
+                    .contactHead {
+                        //text-align: center;
+                        margin-bottom: 10px;
+                        width: 100%;
+                        //padding: ;
+        
+                        img {
+                            width: 100%;
+                            height:auto;
+                        }
+                    } 
+
+                    .contactDetails {
+                        text-align: center;
+                        //padding: 20px;
+
+                        h4 {
+                            svg{
+                                font-size: 45px;
+                               background:#5751E1;
+                               border-radius: 20px;
+                               color: white;
+                               padding: 10px;
+                            }
+                           
+                        }
+
+                        p {
+                            //font-size: 22px;
+                            padding: 10px;
+                            color: #646161;
+                        }
+                    }
+                }
+            }
+        }
+
+        // Media Queries 
+        @media (min-width: 300px) and (max-width: 599px) {
+            .contactRow {
+                grid-template-columns: 1fr; 
+            }
+
+            .contactCol {
+                flex: 1 1 100%; 
+                max-width: none;
+                //margin-right:5%; 
+
+                .contactCard{
+
+                .contactDetails {
+
+                    p{
+                        font-size: 16px;
+                    }
+                }
+
+            }
+                 
+            }
+
+        }
+
+        @media (min-width: 600px) and (max-width: 1023px) {
+            .contactRow {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .contactRow {
+                grid-template-columns: repeat(3, 1fr); 
+
+                .contactCard{
+                    height: 65vh;
+                }
+            }
+        }
+    }
+
+    .contactForm {
+        //padding: 20px 10px;
+
+        h3 {
+            font-size: 24px;
+            color: #5751E1;
+            text-align: center;
+            padding: 15px;
+        }
+
+        .formContainer {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            padding: 0 10px;
+
+            .inputContainer {
+                display: flex;
+                flex-wrap: wrap;
+                margin-bottom: 10px;
+                gap: 20px;
+
+                .inputs {
+                    flex: 1;
+                    min-width: 300px;
+                    padding: 10px;
+
+                    input,
+                    select {
+                        width: 100%;
+                        padding: 15px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                        font-size: 16px;
+                        transition: border-color 0.3s;
+
+                        &:focus {
+                            border-color: #5751E1;
+                            outline: none;
+                        }
+                    }
+                }
+            }
+
+            .textArea {
+                width: 100%;
+                padding: 10px;
+
+                textarea {
+                    width: 100%;
+                    height: 100px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    padding: 10px;
+                    transition: border-color 0.3s;
+
+                    &:focus {
+                        border-color: #5751E1;
+                        outline: none;
+                    }
+                }
+            }
+
+            .submitButton {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    background-color: #5751E1;
+                    color: white;
+                    border: none;
+                    border-radius: 4px;
+                    padding: 10px 30px;
+                    font-size: 16px;
+                    cursor: pointer;
+                    margin-top: 15px;
+                    transition: background-color 0.3s;
+
+                    &:hover {
+                        background-color: #4741b0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 300px) and (max-width: 599px) {
+    .contactRow {
+        grid-template-columns: 1fr;
+    }
+
+    .contactCard {
+        width: 90%;
+        margin: 10px auto;
+        min-height: 200px; 
+    }
+}
+
+@media (min-width: 600px) and (max-width: 1023px) { 
+    .contactRow {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+@media (min-width: 1024px) { 
+
+    .contactForm{
+        padding: 20px 10px;
+    }
+    .contactRow {
+        grid-template-columns: repeat(3, 1fr); 
+    }
+}

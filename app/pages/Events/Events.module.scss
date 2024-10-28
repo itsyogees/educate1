@@ -1,0 +1,108 @@
+.events {
+    .eventsHead {
+        padding: 20px;
+        h2 { 
+            font-weight: 600;
+           
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    .eventsContainer {
+        width: 90%;
+        margin: 0 auto;
+
+        .eventsContainerHead {
+            display: flex;
+            justify-content: space-between;
+            margin: 20px 0;
+
+            h2 {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-weight: 600;
+            }
+
+            .btns {
+                background-color: #5751E1;
+                color: #fff;
+                 
+                font-weight: 600;
+                padding: 15px 30px;
+                border: none;
+                border-radius: 5px;
+            }
+        }
+
+        .eventsContent {
+            margin-bottom: 40px;
+
+            p {
+                 
+                color: #646161;
+                line-height: 2;
+
+                span {
+                    font-weight: 600;
+                    color: #000;
+                }
+            }
+
+            ul {
+                padding: 20px;
+            }
+        }
+    }
+
+    @media (min-width: 300px) {
+        .eventsHead h2 {
+            font-size: 1rem; 
+        }
+      
+        .eventsContainerHead{ 
+            h2 {
+            font-size: 1rem; 
+        }
+        .btns {
+            font-size: 18px;
+        }
+    }
+        .eventsContent p {
+            font-size:1rem ; 
+        }
+    }
+
+    @media (min-width: 600px) {
+        .eventsHead h2 {
+            font-size: 1.875rem; 
+        }
+        .eventsContainerHead {
+             h2 {
+            font-size: 1.5625rem;
+        }
+        .btns {
+            font-size: 1rem;
+        }
+    }
+        .eventsContent p {
+            font-size: 1.125rem; 
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .eventsHead h2 {
+            font-size: 2.5rem; 
+        }
+        .eventsContainerHead h2 {
+            font-size: 1.875rem;
+        }
+        .eventsContent p {
+            font-size: 1.25rem;  
+        }
+    }
+}

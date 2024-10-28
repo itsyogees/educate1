@@ -1,0 +1,312 @@
+.contentContainer {
+    .contentImg {
+        padding: 20px;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    h3 {
+        font-size: 30px;
+        color: #5751E1;
+        padding: 10px 20px;
+    }
+
+    // Introduction
+    .contentDetails {
+        display: flex;
+        padding: 20px;
+        font-weight: 500;
+
+        .contentIntroduction {
+            p {
+                padding: 10px 5px;
+            }
+        }
+
+        .contentData {
+            p {
+                padding: 10px 5px;
+            }
+            button {
+                padding: 10px 15px;
+                background-color: #5751E1;
+                color: #fff;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                transition: background-color 0.3s;
+    
+                &:hover {
+                    background-color: #4a46b2;
+                }
+            }
+        }
+    }
+
+    // Flip Cards
+    .flipCards {
+        padding: 30px;
+
+        .cardGrid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px; 
+        }
+
+        .contentcontainer {
+            width: 100%;
+            height: 300px;
+            perspective: 800px;
+
+            .cards {
+                height: 100%;
+                width: 100%;
+                position: relative;
+                transition: transform 0.6s; 
+                transform-style: preserve-3d;
+
+                &.flipped {
+                    transform: rotateY(180deg);
+                }
+
+                .frontCard,
+                .backCard {
+                    height: 100%;
+                    width: 100%;
+                    border-radius: 1rem;
+                    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+                    position: absolute;
+                    backface-visibility: hidden;
+                    cursor: pointer;
+                }
+
+                .frontCard {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        border-radius: 1rem; 
+                        object-fit: cover; 
+                    }
+                }
+
+                .backCard {
+                    background-color: #3a3a3a;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 1rem;
+                    transform: rotateY(180deg);
+
+                    h1 {
+                        color: #fff; 
+                        font-size: 1.5rem; 
+                    }
+
+                    p {
+                        color: #ccc; 
+                        font-size: 1rem; 
+                        text-align: center; 
+                        padding: 0 10px; 
+                    }
+                }
+            }
+        }
+    }
+
+    // Selected Card
+    .selectedCard {
+        margin: 20px auto;
+       // width: 80%;
+        //height: 70%;
+        border: 1px solid #5751E1;
+        background-color: #3a3a3a;
+        //background-color: #5751E1;
+        color: #fff;
+        border-radius: 10px;
+        position: fixed; 
+        top: 55%; 
+        left: 50%; 
+        transform: translate(-50%, -50%);
+        z-index: 1000; 
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); 
+        text-align: center;
+        padding: 20px;
+        cursor: pointer;
+
+        h1 {
+            font-size: 24px;
+            //margin-bottom: 10px;
+           // margin: 60px;
+        }
+
+        p {
+            font-size: 16px;
+            //margin-bottom: 20px;
+            //margin: 20px;
+        }
+
+        button {
+            padding: 10px 15px;
+            background-color: #5751E1;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+
+            &:hover {
+                background-color: #4a46b2;
+            }
+        }
+    }
+}
+
+// Mobile
+@media (min-width: 300px) and (max-width: 599px) {
+    .contentContainer {
+        h3 {
+            font-size: 24px;
+        }
+
+        .contentDetails {
+            flex-direction: column;
+            padding: 10px;
+
+            .contentIntroduction,
+            .contentData {
+                p {
+                    padding: 5px;
+                }
+                button{
+                    margin-left: 60%;
+                }
+            }
+        }
+
+        .flipCards {
+            padding: 15px;
+
+            .cardGrid {
+                grid-template-columns: 1fr; 
+                gap: 15px;
+            }
+
+            .contentcontainer {
+                height: 300px; 
+            }
+        }
+
+        .selectedCard {
+            width: 90%;
+            //height: 80%;
+            height: auto;
+            padding: 20px;
+            h1{
+             margin-bottom: 30px;
+            }
+            p{
+              margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// iPad
+@media (min-width: 600px) and (max-width: 1023px) {
+    .contentContainer {
+        h3 {
+            font-size: 26px;
+        }
+
+        .contentDetails {
+            padding: 15px;
+
+            .contentIntroduction,
+            .contentData {
+                p {
+                    padding: 8px;
+                }
+                button{
+                    margin-left: 60%;
+                }
+            }
+        }
+
+        .flipCards {
+            padding: 20px;
+
+            .cardGrid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+
+            .contentcontainer {
+                height: 250px; 
+            }
+        }
+        .selectedCard {
+            width: 90%;
+            //height: 80%;
+            height: auto;
+            padding: 20px;
+            h1{
+             margin-bottom: 20px;
+            }
+            p{
+              margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+// Laptop
+@media (min-width: 1024px) {
+    .contentContainer {
+        h3 {
+            font-size: 28px;
+        }
+
+        .contentDetails {
+            padding: 20px;
+
+            .contentIntroduction,
+            .contentData {
+                p {
+                    padding: 10px;
+                }
+                button{
+                    margin-left: 80%;
+                }
+            }
+        }
+
+        .flipCards {
+            padding: 25px;
+
+            .cardGrid {
+                grid-template-columns: repeat(3, 1fr); 
+                gap: 30px;
+            }
+
+            .contentcontainer {
+                height: 300px; 
+            }
+        }
+        .selectedCard {
+            width: 80%;
+            height: 60%;
+            //height: auto;
+            cursor: pointer;
+            h1{
+             margin:50px;
+
+            }
+            p{
+              margin: 30px;
+            }
+        }
+    }
+}

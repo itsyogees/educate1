@@ -1,0 +1,164 @@
+.RelatedCourses {
+    // margin-top: 120px;
+  
+    .RelatedCoursesContainer {
+  
+  
+      .RelatedCoursesHead {
+        margin-bottom: 20px;
+  
+        p {
+          margin-bottom: 10px;
+          color: #5751e1;
+        }
+  
+        h2 {
+          font-size: 2rem;
+          margin-bottom: 10px;
+        }
+      }
+  
+      .RelatedCoursesContent {
+        display: flex;
+        flex-wrap: wrap; // Allow items to wrap to the next line
+        gap: 20px;
+  
+        .cardItem {  
+          flex: 1 1 calc(25% - 20px); // 4 items per row on large screens
+          transition: transform 0.2s ease-in-out;
+          margin-bottom: 40px;
+  
+          .cardLink {
+            display: block;
+            background: #fff;
+            border-radius: 12px;
+            text-decoration: none;
+            border: 2px solid transparent;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            transition: transform 0.3s ease;
+  
+            &:hover {
+              transform: translateY(-5%);
+            }
+  
+            .cardImage {
+              width: 100%;
+              height: 30vh;
+              border-radius: 10px;
+              object-fit: cover;
+            }
+  
+            .sliderCard {
+              padding: 0px 20px;
+  
+              .stars {
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                font-size: 1rem;
+                margin: 0.5rem 0;
+  
+                svg {
+                  margin-right: 0.1rem;
+                  color: #ffd700;
+                }
+              }
+  
+              .cardTitle {
+                color: #000;
+                font-size: 1rem;
+                font-weight: 600;
+                margin-bottom: 20px;
+              }
+            }
+  
+            .cardDoc {
+              color: #7d7d7d;
+              font-weight: 500;
+              display: flex;
+              justify-content: space-between;
+              padding: 0px 20px;
+              margin-bottom: 20px;
+  
+              p {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5px;
+  
+                @media screen and (min-width: 300px) {
+                  font-size: 10px;
+                }
+                @media screen and (min-width: 600px) {
+                  font-size: 15px;
+                }
+                @media screen and (min-width: 1024px) {
+                  font-size: 1rem;
+                }
+              }
+            }
+  
+            .line {
+              border: 1px solid #7d7d7d;
+            }
+  
+            .amount {
+              display: flex;
+              justify-content: space-between;
+              padding: 20px;
+  
+              p {
+                font-size: 1.3rem;
+                font-weight: 500;
+              }
+  
+              .amtBtn {
+                padding: 10px 20px;
+                font-size: 1rem;
+                background-color: #5751e1;
+                outline: none;
+                border: none;
+                color: #fff;
+                border-radius: 8px;
+                cursor: pointer;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  // Responsive Styles
+  @media screen and (max-width: 1024px) {
+    .RelatedCoursesContent {
+      .cardItem {
+        flex: 1 1 calc(33.33% - 20px); // 3 items per row on medium screens
+      }
+    }
+  }
+  
+  @media screen and (max-width: 768px) {
+    .RelatedCoursesContent {
+      .cardItem {
+        flex: 1 1 calc(50% - 20px); // 2 items per row on tablets
+      }
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .RelatedCoursesContent {
+      .cardItem {
+        flex: 1 1 100%; // 1 item per row on mobile
+      }
+    }
+  
+    .RelatedCoursesHead h2 {
+      font-size: 1.5rem; // Smaller heading size on mobile
+    }
+  
+    .RelatedCoursesHead p {
+      font-size: 0.9rem; // Smaller paragraph size on mobile
+    }
+  }
+  

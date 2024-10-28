@@ -1,0 +1,70 @@
+.card {
+  // margin-top: 80px;
+    .cardContainer {
+      width: 90%;
+      margin: 0 auto;
+  
+      .cardHeader {
+        padding: 40px 20px;
+  
+        h2 {
+          color: #5751e1;
+          font-size: 2rem;
+          font-weight: 600;
+        }
+      }
+  
+      .cardContent {
+            
+  
+        .cardRow, .cardRowHeader {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 10px;
+          padding: 20px 0;
+          border-bottom: 1px solid #ccc;
+  
+          .courseImage {
+            width: 25%;
+            img {
+              max-width: 100%;
+              height: auto;
+            }
+          }
+  
+          .courseDetails {
+            width: 30%;
+            padding-left: 10px;
+          }
+  
+          .coursePrice,
+          .courseDiscount,
+          .courseTotal {
+            width: 15%;
+            text-align: right;
+          }
+        }
+      }
+    }
+  
+ 
+  
+    @media (max-width: 480px) {
+      .cardContainer {
+        .cardHeader {
+          h2 {
+            font-size: 1.5rem;
+          }
+        }
+  
+        .cardContent {
+          .cardRowHeader,
+          .cardRow {
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+  

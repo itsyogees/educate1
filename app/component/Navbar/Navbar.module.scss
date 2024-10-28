@@ -1,0 +1,299 @@
+$primary-color: #ffffff;
+$secondary-color: #000000;
+$hover-color: #5751e1;
+$transition-speed: 0.3s;
+$menu-max-height: 500px; 
+
+.navbarMain {
+  position: sticky;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+.navbarContainer {
+  background-color: $primary-color;
+  padding: 15px;
+  position: relative;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @media (max-width: 854px) {
+    padding: 0.5rem;
+  }
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+//   padding: 20px;
+
+  @media (max-width: 854px) {
+    flex-direction: column;
+  }
+
+  .userSection{
+   
+    .navIconBefore{
+      display: flex;
+      :hover{
+        color: #5751e1;
+      }
+      svg{
+        cursor: pointer;
+        margin-left: 25px;
+        font-size: 20px;
+      }
+
+      .signinDiv{
+        :hover{
+          color: #5751e1;
+        }
+        a{
+        display: -webkit-inline-box;
+        }
+        p{
+          padding: 0px 0px 0px 5px;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .navIconsUpdate{
+      display: flex;
+
+      :hover{
+        color: #5751e1;
+      }
+      svg{
+        cursor: pointer;
+        margin-left: 20px;
+        font-size: 20px;
+      }
+
+      p{
+        padding: 0px 5px 0px 15px;
+        cursor: pointer;
+      }
+
+    .dropdownComponent {
+      position: relative;
+      cursor: pointer;
+      //margin-left: 15px;
+
+      .userDropdownList {
+        display: block; 
+        position: absolute;
+        top: 100%;
+        left: -25%;
+        margin-right: 2%;
+        transform: translateX(-50%); 
+        background-color: $hover-color;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+        z-index: 9999;
+        //padding: 0.5rem 0;
+        margin-top: 0px;
+
+        li {
+          padding: 0.5rem 1rem;
+          list-style: none;
+
+          a {
+            color: #ffffff !important;
+            text-decoration: none;
+
+            &:hover {
+              color: #000 !important;
+            }
+          }
+        }
+      }
+    }
+
+    
+  }
+
+
+}
+
+  .navIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+
+    @media (max-width: 854px) {
+      width: 100%;
+    }
+
+    .logo {
+      img {
+        width: 200px;
+        height: auto;
+        @media (max-width: 854px) {
+            width: 140px;
+          }
+      }
+    }
+
+    .menuToggle {
+      display: none;
+      cursor: pointer;
+      font-size: 2rem;
+      color: $secondary-color;
+
+      @media (max-width: 854px) {
+        display: block;
+      }
+    }
+
+    .navItems {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+      margin: 0;
+
+      li {
+        cursor: pointer;
+        color: #000;
+        a {
+          color: $secondary-color;
+          text-decoration: none;
+          font-size: 1.1rem;
+          transition: color 0.3s ease;
+
+          &:hover {
+            color: $hover-color;
+          }
+        }
+        &.hasDropdown {
+          position: relative;
+
+          &:hover .dropdown {
+            display: block;
+          }
+
+          svg{
+          margin-top:3px;
+            :hover {
+              color: $hover-color;
+            }
+          }
+
+          .dropdownIcon {
+            font-size: 0.75rem;
+            margin-left: 0.25rem;
+          }
+        }
+      }
+      .dropdown {
+        width: 200px;
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $hover-color;
+        padding: 0.5rem 0;
+        border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 8px;
+        z-index: 9999;
+        
+        // text-decoration: none;
+
+
+        li {
+          padding: 0.5rem 1rem;
+         list-style: none;
+         
+          a {
+            color: #ffffff !important ;
+            // pointer-events: auto;
+            text-decoration: none;
+            &:hover {
+              color: #000 !important;
+            }
+          }
+        }
+      }
+      @media (max-width: 854px) {
+        max-height: 0;  
+        overflow: hidden;  
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #5751e1;
+        padding: 1rem 0;
+        z-index: 1000;
+        opacity: 0;
+        transition: max-height $transition-speed ease,
+          opacity $transition-speed ease;
+          margin: 10px;
+          padding: 20px;
+
+        li {
+          padding: 0.75rem 0;
+
+          a {
+            color: #ffffff;
+
+            &:hover {
+              color: #000000;
+            }
+          }
+        }
+
+        &.active {
+          max-height: $menu-max-height; // Reveal the menu
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  .rightMenu {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 40%;
+    justify-content: flex-end;
+
+    @media (max-width: 854px) {
+      width: 100%;
+    }
+
+    .helloText,
+    .signInText {
+      color: $secondary-color;
+      font-size: 1rem;
+      cursor: pointer;
+
+      &:hover {
+        color: $hover-color;
+      }
+    }
+
+    .icon {
+      font-size: 1.5rem;
+      cursor: pointer;
+      color: $secondary-color;
+      transition: color $transition-speed ease;
+
+      &:hover {
+        color: lighten($secondary-color, 20%);
+      }
+    }
+
+    @media (max-width: 854px) {
+      .helloText,
+      .signInText {
+        font-size: 0.9rem;
+      }
+
+      .icon {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+}

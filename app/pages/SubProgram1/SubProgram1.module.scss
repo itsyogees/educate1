@@ -1,0 +1,228 @@
+.SubProgram1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+
+  .SubProgramBanner {
+    width: 100%;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .SubProgramHead {
+    position: absolute;
+    top: 7%;
+    left: 20%;
+    text-align: left;
+    margin-top: 20px;
+
+    h2 {
+      font-size: 2rem;
+      color: #333;
+    }
+
+    p {
+      font-size: 1.5rem;
+      color: #666;
+    }
+
+    span {
+      font-size: 1rem;
+      color: #999;
+    }
+  }
+
+  // Responsive Styles
+  @media (max-width: 1200px) {
+    .SubProgramHead {
+      left: 15%; // Adjust for large tablets/smaller desktops
+      h2 {
+        font-size: 1.8rem;
+      }
+      p {
+        font-size: 1.3rem;
+      }
+      span {
+        font-size: 0.9rem;
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .SubProgramHead {
+      left: 10%; // Adjust for tablets
+      h2 {
+        font-size: 1.6rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+      span {
+        font-size: 0.8rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .SubProgramHead {
+      top: 30%;
+      left: 5%; // Adjust for mobile devices
+      h2 {
+        font-size: 1.4rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+      span {
+        font-size: 0.7rem;
+      }
+    }
+  }
+
+  @media (max-width: 576px) {
+    .SubProgramHead {
+      top: 35%;
+      left: 5%; // Further adjustment for smaller mobile screens
+      h2 {
+        font-size: 1.2rem;
+      }
+      p {
+        font-size: 0.9rem;
+      }
+      span {
+        font-size: 0.6rem;
+      }
+    }
+  }
+}
+.SubProgramContent {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  h1 {
+    font-size: 1.2rem; // Default font size
+    color: #333;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 1.6;
+    color: #555;
+    font-weight: 400;
+    margin-bottom: 3rem;
+  }
+
+  .SubProgramSubContent {
+    margin-top: 1.5rem;
+    width: 60%;
+    margin: 0 auto;
+    p {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #666;
+    }
+  }
+
+  // Tablet view
+  @media (max-width: 768px) {
+    padding: 1.5rem;
+
+    h1 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+    }
+
+    .SubProgramSubContent {
+      p {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  // Mobile view
+  @media (max-width: 480px) {
+    padding: 1rem;
+
+    h1 {
+      font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1rem;
+    }
+
+    .SubProgramSubContent {
+      p {
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+.SubProgramQuest{
+    margin: 0 auto;
+    width: 95%;
+    .questionsContainer {
+        width: 60%;
+        margin: 0 auto;
+        padding-top: 20px;
+    margin-bottom: 20px;
+        .question {
+      
+          padding:5px 5px 5px 20px;
+          border-bottom: 1px solid #A8A8A8;
+    
+          button {
+          width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0px;
+            border: none;
+            outline: none;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            background-color: transparent; 
+    
+            /* &:hover {
+              background-color: rgba(87, 81, 225, 0.1); 
+            } */
+          }
+        }
+    
+        .answer {
+          
+          font-size: 1.2rem;
+          max-height: 0;
+          opacity: 0;   
+          line-height: 1.5;
+          overflow: hidden;
+          transition: max-height 0.3s ease, opacity 0.3s ease; 
+    
+          &.show {
+            max-height: 200px; 
+            opacity: 1;       
+            // padding: 0px 15px 30px 15px; 
+          }
+        }
+    
+        .arrow {
+          color: #5751E1;
+          font-size: 52px;
+          transition: transform 0.5s ease-in;
+          padding-right: 20px;
+    
+          &.rotate {
+            transform: rotate(180deg);
+          }
+        }
+      }
+}

@@ -1,0 +1,130 @@
+.SubProgram3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // padding: 2rem;
+}
+
+.SubProgram3Banner {
+  width: 100%;
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+}
+.SubProgram3Container {
+  width: 90%;
+  margin: 0 auto;
+
+  .SubProgram3Head {
+    display: flex;
+    flex-direction: column; /* Align the content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    padding: 2rem; /* Optional: Add some padding */
+  }
+
+  .SubProgram3HeadContent {
+    text-align: center; /* Center the text content */
+
+    width: 90%;
+  }
+
+  .SubProgram3HeadContent h2 {
+    font-size: 2rem; /* Adjust the font size */
+    margin-bottom: 1rem; /* Space between heading and paragraph */
+  }
+
+  .SubProgram3HeadContent p {
+    font-size: 1rem; /* Adjust font size */
+    line-height: 1.6; /* Improve readability */
+    color: #555; /* Optional: Text color */
+  }
+
+  .SubProgram3HeadBtn {
+    display: flex;
+    justify-content: flex-end; /* Align the button to the right */
+    width: 100%; /* Make sure the button section takes up the full width */
+    margin-top: 2rem; /* Add some space above the button */
+  }
+
+  .SubProgram3HeadBtn button {
+    padding: 0.75rem 2rem; /* Add padding to the button */
+    background-color: #005bb5; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default button border */
+    border-radius: 5px; /* Optional: Round corners */
+    cursor: pointer; /* Add pointer on hover */
+  }
+
+  .SubProgram3HeadBtn button:hover {
+    background-color: #003d80; /* Darken the button on hover */
+  }
+
+  .SubProgram3Contents {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 2rem;
+  }
+
+  .SubProgram3Content,
+  .SubProgram3Content1 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    gap: 2rem; /* Adds spacing between the image and the text */
+  }
+
+  /* First content block: Image on the left, text on the right */
+  .SubProgram3Content {
+    flex-direction: row;
+    img {
+      width: 250px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .subContentText {
+      flex: 1;
+      p {
+        border: 1px solid #ccc;
+        padding: 30px 20px;
+        font-size: 1rem; /* Adjust as needed */
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* Second content block: Text on the left, image on the right */
+  .SubProgram3Content1 {
+    flex-direction: row-reverse; /* Reverses the layout so text is on the left and image on the right */
+    img {
+      width: 250px;
+      height: auto;
+      object-fit: cover;
+    }
+
+    .subContentText {
+      flex: 1;
+      p {
+        border: 1px solid #ccc;
+        padding: 30px 20px;
+        font-size: 1rem; /* Adjust as needed */
+        line-height: 1.5;
+      }
+    }
+  }
+
+  /* Media queries for responsive behavior */
+  @media (max-width: 768px) {
+    .SubProgram3Content,
+    .SubProgram3Content1 {
+      flex-direction: column; /* Stack items on top of each other on smaller screens */
+      img {
+        width: 100%;
+      }
+    }
+  }
+}
